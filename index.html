@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Load A-Frame -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- Load AR.js -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs="patternRatio: 0.8">
+      <!-- AR Marker -->
+      <a-marker
+        type="pattern"
+        url="https://cdn.glitch.global/a786fed2-64a1-4fdd-9e4d-4609b5ce8d48/pattern-erg4_elytis_ar.patt?v=1742324795062"
+      >
+        <!-- Initial Image (Moved Higher & Rotated) -->
+        <a-image
+          src="https://cdn.glitch.global/a786fed2-64a1-4fdd-9e4d-4609b5ce8d48/initial1.jpg?v=1742329647203"
+          position="0.5 0 -1"
+          width="1"
+          height="1"
+          rotation="-90 0 0"
+        ></a-image>
+
+        <!-- 🔽 Arrow pointing from poem to initial image -->
+        <a-image
+          src="https://cdn.glitch.global/a786fed2-64a1-4fdd-9e4d-4609b5ce8d48/pngtree-red-arrow-sign-clipart-png-image_6520593.png?v=1742331038900"
+          position="0 -0.5 -0.4"
+          width="0.5"
+          height="0.5"
+          rotation="-90 0 0"
+        ></a-image>
+
+        <!-- Three Images Below the Poem (Smaller & Properly Spaced) -->
+        <a-image
+          src="https://cdn.glitch.global/a786fed2-64a1-4fdd-9e4d-4609b5ce8d48/-4-2048.jpg?v=1742317290576"
+          position="-0.7 -1.2 0"
+          width="0.9"
+          height="0.9"
+          rotation="-90 0 0"
+        ></a-image>
+
+        <a-image
+          src="https://cdn.glitch.global/a786fed2-64a1-4fdd-9e4d-4609b5ce8d48/-17-2048.jpg?v=1742325897125"
+          position="0 -1.2 1"
+          width="0.9"
+          height="0.9"
+          rotation="-90 0 0"
+        ></a-image>
+
+        <a-image
+          src="https://cdn.glitch.global/a786fed2-64a1-4fdd-9e4d-4609b5ce8d48/-5-2048.jpg?v=1742325940601"
+          position="1.2 -1.2 0"
+          width="0.9"
+          height="0.9"
+          rotation="-90 0 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
